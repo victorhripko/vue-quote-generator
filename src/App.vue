@@ -77,9 +77,7 @@ export default {
         this.quote = data.quote;
         this.isLoading = false;
       } catch (e) {
-        console.log(e);
-      } finally {
-        console.log(this.quote);
+        console.error(e);
       }
     },
     async author() {
@@ -90,9 +88,7 @@ export default {
         this.authorQuotes = data;
         this.isLoading = false;
       } catch (e) {
-        console.log(e);
-      } finally {
-        console.log(this.authorQuotes);
+        console.error(e);
       }
     },
     clearAuthor() {
@@ -177,7 +173,7 @@ body {
     place-items: center;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #4f4f4f;
+    color: transparent;
     transition: color 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
